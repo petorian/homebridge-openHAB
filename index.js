@@ -31,6 +31,9 @@
 // 12 February 2016 [tommasomarchionni]
 // - Added support for humidity in Thermostat
 //
+// 19 September 2016 [petorian]
+// - Added humidity sensor item
+//
 // Rollershutter is tested with this binding in OpenHAB:
 // command=SWITCH_MULTILEVEL,invert_percent=true,invert_state=false"
 // When you attempt to add a device, it will ask for a "PIN code".
@@ -66,6 +69,7 @@ module.exports = function(homebridge) {
     Utility.addSupportTo(ItemFactory.LightSensorItem, ItemFactory.TemperatureSensorItem); //TODO ricontrollare
     Utility.addSupportTo(ItemFactory.ThermostatItem, ItemFactory.AbstractItem);
     Utility.addSupportTo(ItemFactory.GarageDoorOpenerItem, ItemFactory.AbstractItem);
+    Utility.addSupportTo(ItemFactory.HumiditySensorItem, ItemFactory.AbstractItem);
     
     homebridge.registerPlatform("homebridge-openhab", "openHAB", OpenHABPlatform);
 };
