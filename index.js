@@ -33,6 +33,7 @@
 //
 // 19 September 2016 [petorian]
 // - Added humidity sensor item
+// - Added coloritem from stephan-01010011
 //
 // Rollershutter is tested with this binding in OpenHAB:
 // command=SWITCH_MULTILEVEL,invert_percent=true,invert_state=false"
@@ -70,6 +71,7 @@ module.exports = function(homebridge) {
     Utility.addSupportTo(ItemFactory.ThermostatItem, ItemFactory.AbstractItem);
     Utility.addSupportTo(ItemFactory.GarageDoorOpenerItem, ItemFactory.AbstractItem);
     Utility.addSupportTo(ItemFactory.HumiditySensorItem, ItemFactory.AbstractItem);
+    Utility.addSupportTo(ItemFactory.ColorItem, ItemFactory.AbstractItem);
     
     homebridge.registerPlatform("homebridge-openhab", "openHAB", OpenHABPlatform);
 };
